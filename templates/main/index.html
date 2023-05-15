@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.center {
+			text-align: center;
+		}
+		.pagination {
+			display: inline-block;
+		}
+		.pagination a {
+			color: black;
+			float: left;
+			padding: 8px 16px;
+			border-radius: 5px;
+			text-decoration: none;
+			transition: background-color .3s;
+			border: 1px solid #ddd;
+			font-size: 22px;
+			margin: 0 4px;
+		}
+		.pagination a.active {
+			background-color: #4CAF50;
+			color: white;
+			border-radius: 5px;
+			border: 1px solid #4CAF50;
+			transition: background-color .3s;
+		}
+
+		.pagination a:hover:not(.active) {
+			background-color: #ddd;
+			border-radius:5px;
+		}
+		* {
+			box-sizing: border-box;
+		}
+		input[type=text], select,textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			resize: vertical;
+		}
+		label {
+			padding: 12px 12px 12px 0;
+			display: inline-block;
+		}
+		input[type=submit] {
+			background-color: #04AA6D;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			float: right;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		.container {
+			border-radius: 5px;
+			background-color: #f2f2f2;
+		}
+		.col-25 {
+			float: left;
+			width: 75%;
+			margin-top: 6px;
+		}
+		.col-75 {
+			float: left;
+			width: 75%;
+			margin-top: 6px;
+		}
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		@media screen and (max-width: 600px) {
+			.col-25, .col-75, input[type=submit] {
+				width: 100%;
+				margin-top: 0;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<h1>CSS Отзывзивая форма</h1>
+
+	<div class="container">
+		<form action="http://127.0.0.1:8000/about/">
+			<div class="row">
+				<div class="col-25">
+					<label for="fname">Имя</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="fname" name="firstname" placeholder="Ваше имя..">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="lname">Фамилия</label>
+				</div>
+				<div class="col-75">
+					<input type="text" name="lastname" id="lname" placeholder="Ваша Фамилия..">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="country">Страна</label>
+				</div>
+				<div class="col-75">
+					<select id="country" name="country">
+						<option value="australia">KAZAKHSTAN</option>
+						<option value="canada">USA</option>
+						<option value="usa">ENGLAND</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="subject">Вопрос</label>
+				</div>
+				<div class="col-75">
+					<textarea id="subject" name="subject" placeholder="Написать что нибудь.." style="height: 200px;"></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<input type="submit" value="Отправить">
+			</div>
+		</form>
+	</div>
+	<div class="center">
+		<div class="pagination">
+			<a href="#" >&laquo;</a>
+			<a href="#">1</a>
+			<a class="active" href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">&raquo;</a>
+		</div>
+	</div>
+</body>
+</html>
